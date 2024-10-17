@@ -3,6 +3,7 @@ import sys
    
 ans = 0
 for line in sys.stdin:
+    line = line.rstrip()
     try:
         ans += int(line)
     except:
