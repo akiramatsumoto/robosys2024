@@ -1,12 +1,17 @@
 #!/usr/bin/python3
 import sys
    
-ans = 0
-for line in sys.stdin:
-    line = line.rstrip()
+
+def tonum(s):
     try:
         ans += int(line)
     except:
         ans += float(line)
-     
+ 
+
+ans = 0
+for line in sys.stdin:
+    line = line.rstrip()
+    ans += tonum(line)
+
 print(ans)
