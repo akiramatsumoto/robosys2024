@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# SPDX-FileCopyrightText: 2024 Akira Matsumoto <akiram8427@gmail.com>
+
 import sys
    
 
