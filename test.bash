@@ -27,7 +27,7 @@ out=$(echo | ./plus)
 ### cosコマンドのテスト ###
 
 ### 通常の入力 ###
-out=$(echo  | ./cos)
+out=$(echo 0 | ./cos)
 [ "$out" = 1.0 ] || ng "$LINENO"
 
 ### 変な入力 ###
