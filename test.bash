@@ -32,7 +32,8 @@ out=$(echo 0 | ./cos)
 
 ### 変な入力 ###
 out=$(seq 5 | ./cos)
-[ "$out" = 1 ] || ng "$LINENO"
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = "" ] ||  ng "$LINENO"
 
 out=$(echo あ | ./cos)
 [ "$?" = 1 ] || ng "$LINENO"
