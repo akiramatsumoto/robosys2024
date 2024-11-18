@@ -9,6 +9,8 @@ ng () {
 
 res=0
 
+### plusコマンドのテスト ###
+
 ### 通常の入力 ###
 out=$(seq 5 | ./plus)
 [ "$out" = 15 ] || ng "$LINENO"
@@ -19,6 +21,24 @@ out=$(echo あ | ./plus)
 [ "$out" = "" ] || ng "$LINENO"
 
 out=$(echo | ./plus)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = "" ] || ng "$LINENO"
+
+### cosコマンドのテスト ###
+
+### 通常の入力 ###
+out=$(echo  | ./cos)
+[ "$out" = 1.0 ] || ng "$LINENO"
+
+### 変な入力 ###
+out=$(seq 5 | ./cos)
+[ "$out" = 1 ] || ng "$LINENO"
+
+out=$(echo あ | ./cos)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = "" ] || ng "$LINENO"
+
+out=$(echo | ./cos)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
