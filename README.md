@@ -120,7 +120,7 @@ seq 5 | ./plus
 ``` 
 ### 応用
 bcコマンドと組み合わせることで複雑な計算も行うことができます.  
-ここでは, cos(π)+loge(e^3)を求めます．
+ここでは, cos(π)+loge(e^3)を求めます.
 - 実行例
 ```
 source set_consts.bash
@@ -143,8 +143,8 @@ echo "$cos_pi + $log_e_cuded" | bc
 - Ubuntu 24.04 LTS
 
 ## ライセンス
-- このソフトウェアパッケージは，3条項bsdライセンスの下，再頒布および使用が許可されます．
-- このパッケージのコードは，下記のスライド（cc-by-sa 4.0 by ryuichi ueda）のものを，本人の許可を得て自身の著作としたものです．
+- このソフトウェアパッケージは, 3条項bsdライセンスの下, 再頒布および使用が許可されます.
+- このパッケージのコードは, 下記のスライド（cc-by-sa 4.0 by ryuichi ueda）のものを, 本人の許可を得て自身の著作としたものです.
     - [ryuichiueda/my_slides robosys_2024](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2024)
 
 © 2024 akira matsumoto
