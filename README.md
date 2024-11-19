@@ -1,6 +1,6 @@
 # 疑似関数電卓
+![test](https://github.com/akiramatsumoto/robosys2024/actions/workflows/test.yml/badge.svg)  
 ターミナルを疑似的に関数電卓にすることができます.
-![test](https://github.com/akiramatsumoto/robosys2024/actions/workflows/test.yml/badge.svg)
 
 - [概要](#概要)
 - [使い方](#使い方)
