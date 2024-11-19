@@ -12,6 +12,7 @@ for line in sys.stdin:
     count += 1
 
 if count > 2 :
+    print("error:2つ以上の数字が入力されました")
     sys.exit(1)
 else :    
     n = math.cos(ans)
