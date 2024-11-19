@@ -81,49 +81,49 @@ out=$(echo | ./tan)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
-### log10コマンドのテスト ###
+### log_10コマンドのテスト ###
 
 ### 通常の入力 ###
-out=$(echo 1 | ./log10)
+out=$(echo 1 | ./log_10)
 [ "$out" = 0.0 ] || ng "$LINENO"
 
 ### 変な入力 ###
-out=$(seq 5 | ./log10)
+out=$(seq 5 | ./log_10)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = error:2つ以上の数字が入力されました ] ||  ng "$LINENO"
 
-out=$(echo あ | ./log10)
+out=$(echo あ | ./log_10)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
-out=$(echo | ./log10)
+out=$(echo | ./log_10)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
-out=$(echo -1 | ./log10)
+out=$(echo -1 | ./log_10)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
-### logeコマンドのテスト ###
+### log_eコマンドのテスト ###
 
 ### 通常の入力 ###
-out=$(echo 1 | ./loge)
+out=$(echo 1 | ./log_e)
 [ "$out" = 0.0 ] || ng "$LINENO"
 
 ### 変な入力 ###
-out=$(seq 5 | ./loge)
+out=$(seq 5 | ./log_e)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = error:2つ以上の数字が入力されました ] ||  ng "$LINENO"
 
-out=$(echo あ | ./loge)
+out=$(echo あ | ./log_e)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
-out=$(echo | ./loge)
+out=$(echo | ./log_e)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
-out=$(echo -1 | ./loge)
+out=$(echo -1 | ./log_e)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
