@@ -6,7 +6,7 @@
 - [x] log10の実装
 	- [x] 引数が負のときにどうなるかテストする
 - [x] logeの実装
-- [ ] log系の名前の変更
+- [x] log系の名前の変更
 - [ ] degree_to_radianの実装
 - [ ] set_constsコマンドの追加
 - [ ] devブランチのマージ

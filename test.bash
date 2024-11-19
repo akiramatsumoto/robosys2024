@@ -127,6 +127,25 @@ out=$(echo -1 | ./log_e)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
+### degree_to_radianコマンドのテスト ###
+
+### 通常の入力 ###
+out=$(echo 0 | ./degree_to_radian)
+[ "$out" = 0.0 ] || ng "$LINENO"
+
+### 変な入力 ###
+out=$(seq 5 | ./degree_to_radian)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = error:2つ以上の数字が入力されました ] ||  ng "$LINENO"
+
+out=$(echo あ | ./degree_to_radian)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = "" ] || ng "$LINENO"
+
+out=$(echo | ./degree_to_radian)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = "" ] || ng "$LINENO"
+
 
 
 [ "$res" = 0 ] && echo OK
