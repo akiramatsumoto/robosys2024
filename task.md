@@ -7,7 +7,7 @@
 	- [x] 引数が負のときにどうなるかテストする
 - [x] logeの実装
 - [x] log系の名前の変更
-- [ ] degree_to_radianの実装
+- [x] degree_to_radianの実装
 - [ ] set_constsコマンドの追加
 - [ ] devブランチのマージ
 - [ ] pythonのテストバージョンの追加
