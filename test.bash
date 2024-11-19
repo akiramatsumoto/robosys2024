@@ -81,6 +81,30 @@ out=$(echo | ./tan)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
+### log10コマンドのテスト ###
+
+### 通常の入力 ###
+out=$(echo 1 | ./log10)
+[ "$out" = 0.0 ] || ng "$LINENO"
+
+### 変な入力 ###
+out=$(seq 5 | ./log10)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = error:2つ以上の数字が入力されました ] ||  ng "$LINENO"
+
+out=$(echo あ | ./log10)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = "" ] || ng "$LINENO"
+
+out=$(echo | ./log10)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = "" ] || ng "$LINENO"
+
+out=$(echo -1 | ./log10)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = "" ] || ng "$LINENO"
+
+
 
 [ "$res" = 0 ] && echo OK
 exit "$res"
