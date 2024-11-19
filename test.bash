@@ -62,6 +62,25 @@ out=$(echo | ./sin)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
+### tanコマンドのテスト ###
+
+### 通常の入力 ###
+out=$(echo 0 | ./tan)
+[ "$out" = 0.0 ] || ng "$LINENO"
+
+### 変な入力 ###
+out=$(seq 5 | ./tan)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = error:2つ以上の数字が入力されました ] ||  ng "$LINENO"
+
+out=$(echo あ | ./tan)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = "" ] || ng "$LINENO"
+
+out=$(echo | ./tan)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "$out" = "" ] || ng "$LINENO"
+
 
 [ "$res" = 0 ] && echo OK
 exit "$res"
