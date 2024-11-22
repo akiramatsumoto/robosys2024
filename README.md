@@ -1,6 +1,5 @@
 # 疑似関数電卓
-![test](https://github.com/akiramatsumoto/robosys2024/actions/workflows/test.yml/badge.svg)  
-
+[![test](https://github.com/akiramatsumoto/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/akiramatsumoto/robosys2024/actions/workflows/test.yml)
 - [概要](#概要)
 - [使い方](#使い方)
 	- [インストール方法](#インストール方法)
@@ -143,8 +142,8 @@ echo "$cos_pi + $log_e_cuded" | bc
 - Ubuntu 24.04 LTS
 
 ## ライセンス
-- このソフトウェアパッケージは, 3条項bsdライセンスの下, 再頒布および使用が許可されます.
-- このパッケージのコードは, 下記のスライド（cc-by-sa 4.0 by ryuichi ueda）のものを, 本人の許可を得て自身の著作としたものです.
-    - [ryuichiueda/my_slides robosys_2024](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2024)
+- このソフトウェアパッケージは, 3条項BSDライセンスの下, 再頒布および使用が許可されます.
+- このパッケージのコードの一部は, 下記のスライド（CC-BY-SA 4.0 by ryuichi ueda）のものを, 本人の許可を得て自身の著作としたものです.
+    - [ryuichiueda/my_slides robosys_2024](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2024)
 
 © 2024 akira matsumoto
