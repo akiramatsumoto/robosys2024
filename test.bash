@@ -27,57 +27,57 @@ out=$(echo | ./plus)
 ### cosコマンドのテスト ###
 
 ### 通常の入力 ###
-out=$(echo 0 | ./cos)
+out=$(echo 0 | ./tri_cos)
 [ "$out" = 1.0 ] || ng "$LINENO"
 
 ### 変な入力 ###
-out=$(seq 5 | ./cos)
+out=$(seq 5 | ./tri_cos)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = error:2つ以上の数字が入力されました ] ||  ng "$LINENO"
 
-out=$(echo あ | ./cos)
+out=$(echo あ | ./tri_cos)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
-out=$(echo | ./cos)
+out=$(echo | ./tri_cos)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
 ### sinコマンドのテスト ###
 
 ### 通常の入力 ###
-out=$(echo 0 | ./sin)
+out=$(echo 0 | ./tri_sin)
 [ "$out" = 0.0 ] || ng "$LINENO"
 
 ### 変な入力 ###
-out=$(seq 5 | ./sin)
+out=$(seq 5 | ./tri_sin)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = error:2つ以上の数字が入力されました ] ||  ng "$LINENO"
 
-out=$(echo あ | ./sin)
+out=$(echo あ | ./tri_sin)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
-out=$(echo | ./sin)
+out=$(echo | ./tri_sin)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
 ### tanコマンドのテスト ###
 
 ### 通常の入力 ###
-out=$(echo 0 | ./tan)
+out=$(echo 0 | ./tri_tan)
 [ "$out" = 0.0 ] || ng "$LINENO"
 
 ### 変な入力 ###
-out=$(seq 5 | ./tan)
+out=$(seq 5 | ./tri_tan)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = error:2つ以上の数字が入力されました ] ||  ng "$LINENO"
 
-out=$(echo あ | ./tan)
+out=$(echo あ | ./tri_tan)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
-out=$(echo | ./tan)
+out=$(echo | ./tri_tan)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "$out" = "" ] || ng "$LINENO"
 
