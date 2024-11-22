@@ -2,7 +2,7 @@
 [![test](https://github.com/akiramatsumoto/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/akiramatsumoto/robosys2024/actions/workflows/test.yml)
 - [概要](#概要)
 - [使い方](#使い方)
-	- [インストール方法](#インストール方法)
+	- [リポジトリのクローン方法](#リポジトリのクローン方法)
 	- [実行方法](#実行方法)
 		- [sinコマンド](#sinコマンド)
 		- [cosコマンド](#cosコマンド)
@@ -24,7 +24,7 @@
 - ターミナルで作業をしている際, 場所を変えることなく計算を行えます.
 
 ## 使い方
-### インストール方法
+### リポジトリのクローン方法
 以下のコマンドをターミナル上で入力します.
 ```
 git clone https://github.com/akiramatsumoto/robosys2024.git
