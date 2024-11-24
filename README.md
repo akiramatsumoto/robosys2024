@@ -161,7 +161,7 @@ seq 5 | ./plus
 - 実行例
 ```
 source set_consts.bash
-cos_pi=$(echo $pi | ./cos)   # cos(π)
+cos_pi=$(echo $pi | ./tri_cos)   # cos(π)
 log_e_cuded=$(echo "$e^3" | bc | ./log_e)   # loge(e^3)
 echo "$cos_pi + $log_e_cuded" | bc   # cos(π)+loge(e^3)
 ```
