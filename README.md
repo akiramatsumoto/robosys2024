@@ -5,7 +5,7 @@
 	- [リポジトリのクローン方法](#リポジトリのクローン方法)
 	- [実行方法](#実行方法)
 		- [定数の設定と表示](#定数の設定と表示)
-			- [set_consts.bashファイル](#set_consts.bashファイル)
+			- [set_consts.bashファイル](#set_consts.bashファイル)   
 			- [print_piコマンド](#print_piコマンド)
 			- [print_eコマンド](#print_eコマンド)
 		- [三角関数](#三角関数)
