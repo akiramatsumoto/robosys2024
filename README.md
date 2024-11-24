@@ -4,13 +4,13 @@
 - [使い方](#使い方)
 	- [リポジトリのクローン方法](#リポジトリのクローン方法)
 	- [実行方法](#実行方法)
-		- [定数の設定および表示](#定数の設定および表示)
+		- [定数の設定と表示](#定数の設定と表示)
 			- [set_consts.bashファイル](#set_consts.bashファイル)
 			- [print_piコマンド](#print_piコマンド)
 			- [print_eコマンド](#print_eコマンド)
 		- [三角関数](#三角関数)
-			- [tri_cosコマンド](#tri_cosコマンド)
 			- [tri_sinコマンド](#tri_sinコマンド)
+			- [tri_cosコマンド](#tri_cosコマンド)
 			- [tri_tanコマンド](#tri_tanコマンド)
 		- [単位変換](#単位変換)
 			- [degree_to_radianコマンド](#degree_to_radianコマンド)
@@ -79,55 +79,38 @@ echo $e
 nはラジアンです.
 - 実行例
 ```
-echo 0 | ./tri_sin
+source set_consts.bash   # πを設定
+echo "scale=15; $pi / 2" | bc | ./tri_sin    # sin(π/2)を計算
 ```
 - 実行結果
 ```
-0.0
+1.0
 ```
 #### tri_cosコマンド
 入力nに対しcos(n)を出力します.  
 nはラジアンです.
 - 実行例
 ```
-echo 0 | ./tri_cos
+source set_consts.bash   # πを設定
+echo $pi | ./tri_cos   # cos(π)を計算
 ```
 - 実行結果
 ```
-1.0
+-1.0
 ```
 #### tri_tanコマンド
 入力nに対しtan(n)を出力します.  
 nはラジアンです.
 - 実行例
 ```
-echo 0 | ./tri_tan
+source set_consts.bash   # πを設定
+echo "scale=15; $pi / 4" | bc | ./tri_tan   # tan(π/4)を計算
 ```
 - 実行結果
 ```
-0.0
+0.9999999999999992   
 ```
-### 対数関数
-#### log_10コマンド
-入力nに対しlog10(n)を出力します.  
-- 実行例
-```
-echo 1 | ./log_10
-```
-- 実行結果
-```
-0.0
-```
-#### log_eコマンド
-入力nに対しloge(n)を出力します.
-- 実行例
-```
-echo 1 | ./log_e
-```
-- 実行結果
-```
-0.0
-```
+πの値は近似値なので計算結果にも若干の誤差が表れることがあります.
 ### 単位変換
 #### degree_to_radianコマンド
 角度をラジアンに変換します.
@@ -139,7 +122,29 @@ echo 180 | ./degree_to_radian
 ```
 3.141592653589793
 ```
-### 総和
+### 対数関数
+#### log_10コマンド
+入力nに対しlog10(n)を出力します.  
+- 実行例
+```
+echo 1000 | ./log_10
+```
+- 実行結果
+```
+3.0
+```
+#### log_eコマンド
+入力nに対しloge(n)を出力します.
+- 実行例
+```
+source set_consts.bash   # eを設定
+echo $e | ./log_e
+```
+- 実行結果
+```
+1.0
+```
+## 総和
 #### plusコマンド
 標準入力から読み込んだ数字を足します.
 - 実行例
@@ -151,14 +156,14 @@ seq 5 | ./plus
 15
 ``` 
 ## 応用
-bcコマンドと組み合わせることで複雑な計算も行うことができます.  
+[実行方法](#実行方法)でも一部で用いていますが, bcコマンドと組み合わせることで複雑な計算も行うことができます.  
 ここでは, cos(π)+loge(e^3)を求めます.
 - 実行例
 ```
 source set_consts.bash
-cos_pi=$(echo $pi | ./cos) #cos(π)
-log_e_cuded=$(echo "$e^3" | bc | ./log_e) #loge(e^3)
-echo "$cos_pi + $log_e_cuded" | bc
+cos_pi=$(echo $pi | ./cos)   # cos(π)
+log_e_cuded=$(echo "$e^3" | bc | ./log_e)   # loge(e^3)
+echo "$cos_pi + $log_e_cuded" | bc   # cos(π)+loge(e^3)
 ```
 - 実行結果
 ```
