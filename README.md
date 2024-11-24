@@ -5,7 +5,7 @@
 	- [リポジトリのクローン方法](#リポジトリのクローン方法)
 	- [実行方法](#実行方法)
 		- [定数の設定と表示](#定数の設定と表示)
-			- [set_consts.bashファイル](#set_consts.bashファイル)   
+			- [set_constsコマンド](#set_constsコマンド)
 			- [print_piコマンド](#print_piコマンド)
 			- [print_eコマンド](#print_eコマンド)
 		- [三角関数](#三角関数)
@@ -39,12 +39,12 @@ cd robosys2024
 ```
 ## 実行方法
 ### 定数の設定と表示
-#### set_consts.bashファイル
+#### set_constsコマンド
 実行すると円周率πとネイピア数eの近似値が変数として保存されます.  
 後述するprint_piコマンドとprint_eコマンドを利用しています.
 - 実行例
 ```
-source set_consts.bash
+source ./set_consts
 echo $pi
 echo $e
 ```
@@ -79,7 +79,7 @@ echo $e
 nはラジアンです.
 - 実行例
 ```
-source set_consts.bash   # πを設定
+source ./set_consts   # πを設定
 echo "scale=15; $pi / 2" | bc | ./tri_sin    # sin(π/2)を計算
 ```
 - 実行結果
@@ -91,7 +91,7 @@ echo "scale=15; $pi / 2" | bc | ./tri_sin    # sin(π/2)を計算
 nはラジアンです.
 - 実行例
 ```
-source set_consts.bash   # πを設定
+source ./set_consts   # πを設定
 echo $pi | ./tri_cos   # cos(π)を計算
 ```
 - 実行結果
@@ -103,7 +103,7 @@ echo $pi | ./tri_cos   # cos(π)を計算
 nはラジアンです.
 - 実行例
 ```
-source set_consts.bash   # πを設定
+source ./set_consts   # πを設定
 echo "scale=15; $pi / 4" | bc | ./tri_tan   # tan(π/4)を計算
 ```
 - 実行結果
@@ -137,7 +137,7 @@ echo 1000 | ./log_10
 入力nに対しloge(n)を出力します.
 - 実行例
 ```
-source set_consts.bash   # eを設定
+source ./set_consts   # eを設定
 echo $e | ./log_e
 ```
 - 実行結果
@@ -160,7 +160,7 @@ seq 5 | ./plus
 ここでは, cos(π)+loge(e^3)を求めます.
 - 実行例
 ```
-source set_consts.bash
+source ./set_consts
 cos_pi=$(echo $pi | ./tri_cos)   # cos(π)
 log_e_cuded=$(echo "$e^3" | bc | ./log_e)   # loge(e^3)
 echo "$cos_pi + $log_e_cuded" | bc   # cos(π)+loge(e^3)
